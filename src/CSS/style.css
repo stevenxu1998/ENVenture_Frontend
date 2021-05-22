@@ -1,0 +1,344 @@
+/* body, html {
+    height: 100%;
+} */
+/* .CoursePage__TabLink{
+    background-color: #333;
+    color: white;
+    width: 13.49%;/*buttons will all equal lengths to fill in the remaining with
+    cursor: pointer;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+#CourseHome, #Content, #Grades, #Dropbox,#Quizzes,#ClassList, #Add{
+    display: none;/*have this...for now...just to test the javascript
+} */
+.AddDeleteStudents, .AddDeleteCourse, .AddDeleteAnnouncements{
+    margin-left:25%;
+    margin-top:50px;
+}
+.AddDeleteTeacher{
+    margin-left:15%;
+    margin-top:50px;
+}
+.CourseClassList__SearchMenu{
+    margin-left:250px;
+    /* flex:15%; */
+    /* padding:15px 0px;     */
+} 
+#CourseClassList__myMenu{
+    margin-top:10px;
+    font-size:18px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:#bbb;
+    width:30%;
+}
+#CourseClassList__myMenu li a {
+    color: black;
+}
+#CourseClassList__myMenu li a:hover{
+    /* background-color: #eee; */
+    color: #ff005e;
+    transition:         color 0.75s;
+}
+#CourseClassList__myMenu li:hover{
+    background-color: #eee;
+}
+#CourseClassList__myMenu li{
+    padding:10px;
+}
+#CourseClassList__mySearch{
+    width:30%;
+    height:50px;
+    font-size: 18px;
+}
+.Course__TabList{
+    background-color:#333;
+    color:white;
+}
+#mySearch{
+    float:left;
+}
+.CourseHome, .CourseGrade, .CourseQuizzes, .CourseDropBox, .CourseContent, .CourseClassList{
+    font-family:Candara;
+}
+.CourseHome__Header{
+    background-image: url('../IMG/CourseBackground.jpg');
+    background-size: 100%;
+    padding-bottom: 35%;
+    text-align: center;
+}
+.CourseHome__Announcements--Title{
+    text-align: center;
+    margin-top: 25px;
+}
+.CourseHome__Announcements--Content{
+    margin-left: 200px;
+    font-size: 24px;
+}
+.Header{
+    position: static;
+    background-color:#333;
+    /*padding-top: 26px;*/
+    padding-bottom: 60px;/* related to image height*/
+}
+.headerDropDownMenu__btn{
+    background-color: #333;
+    color: white;
+    border: none;
+}
+.headerDropDownMenu {
+    float: right;
+    background-color:#333;
+    margin-right: 10px;
+    padding-top: 15px;
+    display: inline-block;
+}
+.headerDropDownMenu__Content {
+    display: none;
+    position: absolute;
+    right:0;
+    background-color: #333;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.headerDropDownMenu__Content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.headerDropDownMenu:hover .headerDropDownMenu__Content {
+    display: block;
+    float:right;
+}
+.headerDropDownMenu__Name{
+    padding:0px;
+    color:white;
+    font-size: 16px;
+}
+img#Header__Logo{
+    float: left;
+    display: block;
+    height: 60px;/*related to .top-bar padding */
+}
+
+
+.sideMenu__Navigation {
+    display: block;
+    color:black;
+    padding-bottom: 100%;
+    /*margin-top: 25px;*/
+}
+.sideMenu {
+    float:left;
+    padding-bottom: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    width: 84.6px;
+    position: static;
+}
+.sideMenu__DropDown{
+    /*float: left;*/
+    background-color:#333;
+    margin-right: 10px;
+    /*padding-top: 15px;*/
+    display: inline-block;
+}
+.sideMenu__DropDownContent{
+    /*display: none;*/
+    position: absolute;
+    right:0;
+    background-color: #333;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* .sideMenu__DropDown:hover{
+    float:left;
+    /*display: block;*/
+    /*text-align: left;
+} */
+#sideMenu__DropDownContent{
+    display: none;
+}
+.sideMenu__DropDownbtn{
+    background-color: #333;
+    color: white;
+    border: none;
+    margin-left:-6px;
+}
+section.HomePageContent {
+    float:left;
+    width: 60%;
+}
+section.LogisticsToDoList{
+    float:left;
+    margin-top:50px;
+    margin-left:25px;
+    width: 50%;
+}
+section.LogisticsToDoForm{
+    float:left;
+    margin-top:50px;
+    margin-left:25px;
+}
+.LogisticsToDoList__Form--AddBtn, .LogisticsToDoList__Form--DeleteBtn{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 8px;
+    margin-left:0%;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.Settings{
+    margin-top:50px;
+    border-style: double;
+    /* width: 100%; */
+    margin-left:184.6px;
+    margin-right: 100px;
+}
+.Settings__Header{
+    text-align: center;
+    margin-top: 50px;
+}
+section.Announcements{
+    float:left;
+    margin-top: 50px;
+    width:30%;
+    word-wrap: break-word;
+}
+ul.sideMenu__List{
+    list-style-type: none; 
+    padding:10px;
+    margin:0;
+}
+.headerDropDownMenu__Content a, .CoursePage__TabLink:hover {
+    color:white;
+    transition:         color 0.75s;
+}
+.Settings__Form{
+    margin-left:300px;
+}
+ul li a.sideMenu__LinkName {
+    color:white;
+    transition:         color 0.75s;
+}
+a.sideMenu__LinkName:hover, .CoursePage__TabLink:hover, a:hover {
+    color: #ff005e;
+    text-decoration:none;
+}
+ ul .sideMenu__Link{
+    padding-bottom:50px;
+ }
+ .HomePageContent__welcomeSection, .HomePageContent__Courses{
+     margin-left: 25px;
+ }
+ img#HomePage__Logo{
+     /*display: block;*/
+     margin-left: auto;
+     margin-right: auto;
+     width: 120%;
+     height:120%;
+ }
+div.HomePageContent__welcomeMessage{
+     word-wrap: break-word;
+ } 
+ div.HomePageContent__item{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+ }
+ select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .Settings__Form--Text{
+      font-size: 20px;
+  }
+  .Settings__Form--Savebtns, .Settings__Form--Addbtns,.UserProfile__ChangeProfilebtn {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 8px;
+    margin-right:10px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .Settings__Form--Deletebtns{
+    width: 20%;
+    background-color:red;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 8px;
+    margin-right:10px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .Settings__Form--Cancelbtns{
+    width: 20%;
+    background-color:gray;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 8px;
+    margin-right:10px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 40%;
+    overflow-x:auto;/*horizontal display bar if the screen is too small*/
+  }
+  #DropBox{
+    margin-left:35%;
+  }
+  th, td {
+    padding: 20px;
+    text-align: left;
+  }
+  th{
+    background-color: #4CAF50;
+    color: white;
+  }
+  .CourseGrade__Title, .CourseQuizzes__Title, .CourseDropBox__Title, .CourseContent__Title, .CourseClassList__Title{
+      margin-left:47%;
+      margin-bottom: 50px;
+      margin-top:25px;
+  }
+  .UserProfile__UserPic{
+      width:50%;
+      height:50%;
+  }
+  .UserProfile{
+      margin-left:25%;
+  }
+  /*comment out label?*/
