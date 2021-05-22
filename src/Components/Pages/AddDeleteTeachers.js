@@ -1,0 +1,90 @@
+import React, {Component} from 'react';
+
+//importing css files.....
+import '../../CSS/style.css';
+
+//trying a new react js implementation format for when javascript is required 
+//the <p> tags are prone to change after filling in the forms through javascript
+class AddDeleteCourse extends Component {
+    constructor(){
+        super();
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleSubmit(event){
+        event.preventDefault();
+        const data = new FormData(event.target);
+
+        // NOTE: you access FormData fields with `data.get(fieldName)`    
+        // const [month, day, year] = data.get('birthdate').split('/');
+        // const serverDate = `${year}-${month}-${day}`;
+        // data.set('birthdate', serverDate);
+        // data.set('username', data.get('username').toUpperCase());
+
+        fetch('/Teachers', {
+            method:'POST',
+            body: data,
+        }).then(response =>{
+            if (!response.ok){
+                throw Error("Error");
+            }
+            return response.json();
+        }).catch(error=>{
+            console.log(error);
+        });
+    }
+    render(){
+    return (
+        <div className ="AddDeleteTeacher">
+            <section className = "UserProfile">
+                <h3>Add Teacher Profile</h3>
+                <h4>Contact Information</h4>
+                <form onSubmit = {this.handleSubmit}>
+                    <label for = "FirstName" className = "Settings__Form--Text">First Name</label><br></br>
+                    <input name = "FirstName" id = "FirstName"/><br></br>
+                    <label for = "LastName" className = "Settings__Form--Text">Last Name</label><br></br>
+                    <input name = "LastName" id = "LastName"/><br></br>
+                    <label for = "Email" className = "Settings__Form--Text">Email</label><br></br>
+                    <input name = "Email" id = "Email"/><br></br>
+                    <label for = "Birthdate" className = "Settings__Form--Text">Date of Birth</label><br></br>
+                    <input name = "Birthdate" id = "Birthdate" placeholder = "(mm/dd/yyyy)"/><br></br>
+                    <label for = "Address 1" className = "Settings__Form--Text">Address 1</label><br></br>
+                    <input name = "Address 1" id = "Address 1"/><br></br>
+                    <label for = "Address 2" className = "Settings__Form--Text">Address 2</label><br></br>
+                    <input name = "Address 2" id = "Address 2"/><br></br>
+                    <label for = "City" className = "Settings__Form--Text">City</label><br></br>
+                    <input name = "City" id = "City"/><br></br>
+                    <label for = "ProvinceState" className = "Settings__Form--Text">Province/State</label><br></br>
+                    <input name = "ProvinceState" id = "ProvinceState"/><br></br>
+                    <label for = "Country" className = "Settings__Form--Text">Country</label><br></br>
+                    <input name = "Country" id = "Country"/><br></br>
+                    <label for = "Zip" className = "Settings__Form--Text">Zip/Postal Code</label><br></br>
+                    <input name = "Zip" id = "Zip"/><br></br>
+                    <label for = "HomePhone" className = "Settings__Form--Text">HomePhone</label><br></br>
+                    <input name = "HomePhone" id = "HomePhone"/><br></br>
+                    <label for = "CellPhone" className = "Settings__Form--Text">CellPhone</label><br></br>
+                    <input name = "CellPhone" id = "CellPhone"/><br></br>
+                    <label for = "High School" className = "Settings__Form--Text">High School</label><br></br>
+                    <input name = "High School" id = "High School"/><br></br>
+                    <label for = "PostSecondary" className = "Settings__Form--Text">College/University</label><br></br>
+                    <input name = "PostSecondary" id = "PostSecondary"/><br></br>
+                    <button className = "Settings__Form--Savebtns">Save and Close</button>
+                    <button className = "Settings__Form--Savebtns">Save</button>
+                    <button className = "Settings__Form--Cancelbtns">Cancel</button>
+                </form>
+                <h3>Delete a Teacher from the system</h3>
+                <form onSubmit = {this.handleSubmit}>
+                    <label for = "FirstName" className = "Settings__Form--Text">First Name</label><br></br>
+                    <input name = "FirstName" id = "FirstName"/><br></br>
+                    <label for = "LastName" className = "Settings__Form--Text">Last Name</label><br></br>
+                    <input name = "LastName" id = "LastName"/><br></br>
+                    <label for = "TeacherID" className = "Settings__Form--Text">Teacher ID</label><br></br>
+                    <input name = "TeacherID" id = "TeacherID"/><br></br>
+                    <button className = "Settings__Form--Deletebtns">Delete</button>
+                    <button className = "Settings__Form--Cancelbtns">Cancel</button>
+                </form>
+            </section>
+        </div>
+    );}
+};
+
+export default AddDeleteCourse;
